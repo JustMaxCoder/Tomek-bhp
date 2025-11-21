@@ -2,15 +2,17 @@ import { Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import { Button } from "../components/ui/button";
 import { ArrowRight } from "lucide-react";
-import bhpBackground from "@assets/bhp-hero.jpg";
-import categoryOdziezRobocza from "@assets/category-odziez-robocza.jpg";
-import categoryObuwie from "@assets/category-obuwie.jpg";
-import categoryRekawice from "@assets/category-rekawice.jpg";
-import categoryOchronaGlowy from "@assets/category-ochrona-glowy.jpg";
-import categoryUslugi from "@assets/category-uslugi.jpg";
 import { BRANDING } from "../config/branding";
 import type { Product } from "../../../shared/schema";
 import GoogleReviews from "../components/GoogleReviews";
+
+// Placeholder images - replace with actual images in attached_assets folder
+const bhpBackground = "https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=1200&h=800&fit=crop";
+const categoryOdziezRobocza = "https://images.unsplash.com/photo-1583225214464-9296029427aa?w=400&h=300&fit=crop";
+const categoryObuwie = "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=400&h=300&fit=crop";
+const categoryRekawice = "https://images.unsplash.com/photo-1615627121117-e3278bc8b1db?w=400&h=300&fit=crop";
+const categoryOchronaGlowy = "https://images.unsplash.com/photo-1585435557343-3b092031a831?w=400&h=300&fit=crop";
+const categoryUslugi = "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=400&h=300&fit=crop";
 
 export default function Home() {
   const { data: products = [], isLoading } = useQuery<Product[]>({

@@ -1,5 +1,9 @@
 import { defineConfig } from 'drizzle-kit';
 import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const DATABASE_URL = process.env.DATABASE_URL;
 const useSqlite =
@@ -11,9 +15,9 @@ const schema = './packages/database/schema/*.schema.ts';
 
 let config: any;
 if (useSqlite) {
-  // Use relative path (from repo root) for drizzle-kit compatibility
-  const defaultSqlitePath = './packages/database/dev.sqlite';
-  const sqliteUrl = DATABASE_URL ? DATABASE_URL : `file:${defaultSqlitePath}`;
+  // Use absolute path for better-sqlite3 compatibility
+  const defaultSqlitePath = path.resolve(__dirname, 'dev.sqlite');
+  const sqliteUrl = DATABASE_URL ? DATABASE_URL : defaultSqlitePath;
   config = {
     out,
     schema,

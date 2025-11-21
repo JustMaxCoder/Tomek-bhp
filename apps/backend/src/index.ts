@@ -84,10 +84,10 @@ app.use((req, res, next) => {
   server.listen(
     {
       port,
-      host: "127.0.0.1", // ✅ IPv4, работает на Windowsр
+      host: "0.0.0.0",
     },
     () => {
-      log(`✅ Server running at http://127.0.0.1:${port}`);
+      log(`✅ Server running at http://0.0.0.0:${port}`);
     }
   );
 })();
