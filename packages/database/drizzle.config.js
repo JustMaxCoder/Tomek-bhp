@@ -1,9 +1,5 @@
 
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const path = require('path');
 
 const DATABASE_URL = process.env.DATABASE_URL;
 const useSqlite =
@@ -39,4 +35,4 @@ if (useSqlite) {
   };
 }
 
-export default config;
+module.exports = config;
