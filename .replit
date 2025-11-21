@@ -32,7 +32,7 @@ outputType = "webview"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "USE_SQLITE=true npm run dev:backend"
+args = "npm run dev:backend"
 waitForPort = 5000
 
 [[ports]]
