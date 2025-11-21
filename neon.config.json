@@ -1,0 +1,19 @@
+{
+  "neon": {
+    "description": "Neon Local Connect Configuration for perfectrrw project",
+    "driver": "PostgreSQL",
+    "connectionString": "postgres://neon:npg@localhost:5432/bhp_perfect",
+    "autoConnect": true,
+    "features": {
+      "schemaViewer": true,
+      "sqlEditor": true,
+      "tableDataEditor": true,
+      "psqlShell": true
+    },
+    "recommendations": {
+      "ephemeralBranches": "Use for temporary testing and CI/CD",
+      "persistentBranches": "Use for feature development and collaboration",
+      "branchReset": "Reset to parent branch state before pulling updates"
+    }
+  }
+}

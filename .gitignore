@@ -1,0 +1,62 @@
+# Environment Variables
+.env
+.env.local
+.env.production
+.env.production.local
+.env.staging
+.env.staging.local
+
+# Dependencies
+node_modules/
+dist/
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+
+# Server
+server/public
+vite.config.ts.*
+
+# Build outputs
+dist/
+build/
+.next/
+
+# Logs
+logs/
+*.log
+
+# Temporary
+tmp/
+temp/
+.cache/
+.turbo/
+.vercel/
+*.tar.gz
+.local/
+
+# Database
+*.db
+*.sqlite
+
+# IDE & OS
+Thumbs.db
+.vs/
+
+# Husky
+.husky/_
+
+# Testing
+coverage/
+.nyc_output/
+
+# Uploads
+public/uploads/
+uploads/
+
+# Docker
+docker-compose.override.yml
