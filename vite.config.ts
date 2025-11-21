@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 export default defineConfig({
-  root: path.resolve(__dirname, "public"), // 👈 теперь указываем на public
+  root: path.resolve(__dirname, "public"),
   plugins: [react()],
   resolve: {
     alias: {
@@ -17,10 +17,11 @@ export default defineConfig({
     },
   },
   build: {
-    outDir: path.resolve(__dirname, "dist/public"), // 👈 билд в dist/public
+    outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
   },
   server: {
     port: 5173,
+    allowedHosts: "all" // 👈 Разрешаем все хосты
   },
 });
